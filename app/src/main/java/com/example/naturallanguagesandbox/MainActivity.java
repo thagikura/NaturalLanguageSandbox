@@ -9,6 +9,7 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.gson.GsonFactory;
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(view -> {
             EditText editText = findViewById(R.id.edittext);
             if (TextUtils.isEmpty(editText.getText())) {
+                Toast.makeText(this, "Enter some text to try", Toast.LENGTH_SHORT).show();
                 return;
             }
 
